@@ -6,9 +6,18 @@
     "total_attempted": 12,
     "total_solved": 10,
     "by_difficulty": {
-      "easy": { "attempted": 7, "solved": 5 },
-      "medium": { "attempted": 5, "solved": 5 },
-      "hard": { "attempted": 0, "solved": 0 }
+      "easy": {
+        "attempted": 7,
+        "solved": 5
+      },
+      "medium": {
+        "attempted": 5,
+        "solved": 5
+      },
+      "hard": {
+        "attempted": 0,
+        "solved": 0
+      }
     }
   },
   "problems": [
@@ -17,8 +26,9 @@
       "slug": "palindrome-number",
       "title": "Palindrome Number",
       "difficulty": "easy",
-      "topics": ["math"],
-      "day": 1,
+      "topics": [
+        "math"
+      ],
       "date_attempted": "2026-07-20",
       "date_solved": null,
       "status": "in_progress",
@@ -35,8 +45,10 @@
       "slug": "valid-palindrome",
       "title": "Valid Palindrome",
       "difficulty": "easy",
-      "topics": ["two-pointers", "string"],
-      "day": 2,
+      "topics": [
+        "two-pointers",
+        "string"
+      ],
       "date_attempted": "2026-07-20",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -53,8 +65,10 @@
       "slug": "two-sum",
       "title": "Two Sum",
       "difficulty": "easy",
-      "topics": ["array", "hash-table"],
-      "day": 3,
+      "topics": [
+        "array",
+        "hash-table"
+      ],
       "date_attempted": "2026-07-20",
       "date_solved": "2026-07-21",
       "status": "solved",
@@ -71,8 +85,12 @@
       "slug": "maximum-depth-of-binary-tree",
       "title": "Maximum Depth of Binary Tree",
       "difficulty": "easy",
-      "topics": ["tree", "dfs", "bfs", "recursion"],
-      "day": 4,
+      "topics": [
+        "tree",
+        "dfs",
+        "bfs",
+        "recursion"
+      ],
       "date_attempted": "2026-07-21",
       "date_solved": "2026-07-21",
       "status": "solved",
@@ -89,8 +107,11 @@
       "slug": "binary-tree-level-order-traversal",
       "title": "Binary Tree Level Order Traversal",
       "difficulty": "medium",
-      "topics": ["tree", "bfs", "queue"],
-      "day": 6,
+      "topics": [
+        "tree",
+        "bfs",
+        "queue"
+      ],
       "date_attempted": "2026-07-22",
       "date_solved": "2026-07-22",
       "status": "solved",
@@ -107,8 +128,11 @@
       "slug": "binary-tree-zigzag-level-order-traversal",
       "title": "Binary Tree Zigzag Level Order Traversal",
       "difficulty": "medium",
-      "topics": ["tree", "bfs", "queue"],
-      "day": 7,
+      "topics": [
+        "tree",
+        "bfs",
+        "queue"
+      ],
       "date_attempted": "2026-07-22",
       "date_solved": "2026-07-22",
       "status": "solved",
@@ -125,8 +149,11 @@
       "slug": "valid-anagram",
       "title": "Valid Anagram",
       "difficulty": "easy",
-      "topics": ["string", "hash-table", "sorting"],
-      "day": 8,
+      "topics": [
+        "string",
+        "hash-table",
+        "sorting"
+      ],
       "date_attempted": "2026-07-24",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -143,8 +170,12 @@
       "slug": "invert-binary-tree",
       "title": "Invert Binary Tree",
       "difficulty": "easy",
-      "topics": ["tree", "dfs", "bfs", "recursion"],
-      "day": 9,
+      "topics": [
+        "tree",
+        "dfs",
+        "bfs",
+        "recursion"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -161,8 +192,10 @@
       "slug": "reverse-linked-list",
       "title": "Reverse Linked List",
       "difficulty": "easy",
-      "topics": ["linked-list", "recursion"],
-      "day": 10,
+      "topics": [
+        "linked-list",
+        "recursion"
+      ],
       "date_attempted": "2026-07-24",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -179,8 +212,13 @@
       "slug": "flatten-binary-tree-to-linked-list",
       "title": "Flatten Binary Tree to Linked List",
       "difficulty": "medium",
-      "topics": ["tree", "dfs", "stack", "linked-list", "binary-tree"],
-      "day": 17,
+      "topics": [
+        "tree",
+        "dfs",
+        "stack",
+        "linked-list",
+        "binary-tree"
+      ],
       "date_attempted": "2026-07-24",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -197,8 +235,13 @@
       "slug": "construct-binary-tree-from-preorder-and-inorder-traversal",
       "title": "Construct Binary Tree from Preorder and Inorder Traversal",
       "difficulty": "medium",
-      "topics": ["tree", "dfs", "recursion", "hash-table", "divide-and-conquer"],
-      "day": 18,
+      "topics": [
+        "tree",
+        "dfs",
+        "recursion",
+        "hash-table",
+        "divide-and-conquer"
+      ],
       "date_attempted": "2026-07-24",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -215,8 +258,11 @@
       "slug": "min-stack",
       "title": "Min Stack",
       "difficulty": "medium",
-      "topics": ["stack", "design", "linked-list"],
-      "day": 19,
+      "topics": [
+        "stack",
+        "design",
+        "linked-list"
+      ],
       "date_attempted": "2026-07-24",
       "date_solved": "2026-07-24",
       "status": "solved",
@@ -234,8 +280,13 @@
       "title": "TP - Store Catalog (recursion over JSON)",
       "difficulty": "easy",
       "type": "tp",
-      "topics": ["tree", "json", "dict", "recursion", "dfs"],
-      "day": 11,
+      "topics": [
+        "tree",
+        "json",
+        "dict",
+        "recursion",
+        "dfs"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -254,8 +305,14 @@
       "title": "TP - Company Org Chart",
       "difficulty": "easy",
       "type": "tp",
-      "topics": ["tree", "json", "dict", "recursion", "dfs", "bfs"],
-      "day": 5,
+      "topics": [
+        "tree",
+        "json",
+        "dict",
+        "recursion",
+        "dfs",
+        "bfs"
+      ],
       "date_attempted": "2026-07-23",
       "date_solved": null,
       "status": "in_progress",
@@ -274,8 +331,12 @@
       "title": "JSON 01 - The 4 functions",
       "difficulty": "easy",
       "type": "learn",
-      "topics": ["json", "dict", "list", "io"],
-      "day": 12,
+      "topics": [
+        "json",
+        "dict",
+        "list",
+        "io"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -294,8 +355,13 @@
       "title": "JSON 02 - A list of objects",
       "difficulty": "easy",
       "type": "learn",
-      "topics": ["json", "list", "dict", "hash-table", "sorting"],
-      "day": 13,
+      "topics": [
+        "json",
+        "list",
+        "dict",
+        "hash-table",
+        "sorting"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -314,8 +380,11 @@
       "title": "JSON 03 - Nested data & missing keys",
       "difficulty": "easy",
       "type": "learn",
-      "topics": ["json", "dict", "error-handling"],
-      "day": 14,
+      "topics": [
+        "json",
+        "dict",
+        "error-handling"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -334,8 +403,12 @@
       "title": "JSON 04 - Writing JSON, and the traps",
       "difficulty": "easy",
       "type": "learn",
-      "topics": ["json", "io", "unicode", "serialization"],
-      "day": 15,
+      "topics": [
+        "json",
+        "io",
+        "unicode",
+        "serialization"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",
@@ -354,8 +427,11 @@
       "title": "JSON 05 - When it breaks, and a real messy file",
       "difficulty": "easy",
       "type": "learn",
-      "topics": ["json", "error-handling", "data-cleaning"],
-      "day": 16,
+      "topics": [
+        "json",
+        "error-handling",
+        "data-cleaning"
+      ],
       "date_attempted": null,
       "date_solved": null,
       "status": "todo",

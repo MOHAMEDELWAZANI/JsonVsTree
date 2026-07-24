@@ -40,27 +40,27 @@ a relative path that goes up one level first, e.g.
 
 ### Problems
 
-| # | Problem | Difficulty | Day | Status |
-|---|---|---|---|---|
-| 9 | [Palindrome Number](problems/PalindromeNumber.ipynb) | Easy | 1 | in_progress |
-| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | 2 | ✅ solved |
-| 1 | [Two Sum](problems/TwoSum.ipynb) | Easy | 3 | ✅ solved |
-| 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | 4 | ✅ solved |
-| 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | 6 | ✅ solved |
-| 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | 7 | ✅ solved |
-| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | 8 | ✅ solved |
-| 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | 9 | todo |
-| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | 10 | ✅ solved |
-| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | 17 | ✅ solved |
-| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | 18 | ✅ solved |
-| 155 | [Min Stack](problems/MinStack.ipynb) | Medium | 19 | ✅ solved |
+| # | Problem | Difficulty | Status |
+|---|---|---|---|
+| 9 | [Palindrome Number](problems/PalindromeNumber.ipynb) | Easy | in_progress |
+| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | ✅ solved |
+| 1 | [Two Sum](problems/TwoSum.ipynb) | Easy | ✅ solved |
+| 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | ✅ solved |
+| 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | ✅ solved |
+| 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | ✅ solved |
+| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | ✅ solved |
+| 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | todo |
+| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | ✅ solved |
+| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | ✅ solved |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | ✅ solved |
+| 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved |
 
 ### TP
 
-| TP | Topic | Data | Day | Status |
-|---|---|---|---|---|
-| [Company Org Chart](tp/TP_OrgChart.ipynb) | tree + json + dict | [company.json](data/company.json) | 5 | in_progress |
-| [Store Catalog](tp/TP_JsonCatalog.ipynb) | recursion over nested JSON | [catalog.json](data/catalog.json) | 11 | todo |
+| TP | Topic | Data | Status |
+|---|---|---|---|
+| [Company Org Chart](tp/TP_OrgChart.ipynb) | tree + json + dict | [company.json](data/company.json) | in_progress |
+| [Store Catalog](tp/TP_JsonCatalog.ipynb) | recursion over nested JSON | [catalog.json](data/catalog.json) | todo |
 
 ### Learning track - JSON
 
