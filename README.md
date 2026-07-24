@@ -36,7 +36,7 @@ a relative path that goes up one level first, e.g.
 
 ## Progress
 
-**8 solved / 11 attempted**
+**10 solved / 12 attempted**
 
 ### Problems
 
@@ -48,11 +48,12 @@ a relative path that goes up one level first, e.g.
 | 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | 4 | ✅ solved |
 | 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | 6 | ✅ solved |
 | 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | 7 | ✅ solved |
-| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | 8 | todo |
+| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | 8 | ✅ solved |
 | 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | 9 | todo |
 | 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | 10 | ✅ solved |
 | 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | 17 | ✅ solved |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | 18 | ✅ solved |
+| 155 | [Min Stack](problems/MinStack.ipynb) | Medium | 19 | ✅ solved |
 
 ### TP
 

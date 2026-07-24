@@ -3,11 +3,11 @@
   "started_on": "2026-07-20",
   "last_updated": "2026-07-24",
   "stats": {
-    "total_attempted": 11,
-    "total_solved": 8,
+    "total_attempted": 12,
+    "total_solved": 10,
     "by_difficulty": {
-      "easy": { "attempted": 7, "solved": 4 },
-      "medium": { "attempted": 4, "solved": 4 },
+      "easy": { "attempted": 7, "solved": 5 },
+      "medium": { "attempted": 5, "solved": 5 },
       "hard": { "attempted": 0, "solved": 0 }
     }
   },
@@ -127,16 +127,16 @@
       "difficulty": "easy",
       "topics": ["string", "hash-table", "sorting"],
       "day": 8,
-      "date_attempted": null,
-      "date_solved": null,
-      "status": "todo",
-      "attempts": 0,
+      "date_attempted": "2026-07-24",
+      "date_solved": "2026-07-24",
+      "status": "solved",
+      "attempts": 1,
       "used_hints": false,
-      "time_complexity": null,
-      "space_complexity": null,
+      "time_complexity": "O(n)",
+      "space_complexity": "O(k) distinct chars",
       "file": "problems/ValidAnagram.ipynb",
       "url": "https://leetcode.com/problems/valid-anagram/",
-      "notes": "String problem, brings back the dict-counting idea from Two Sum. Three routes: sort O(n log n), dict tally O(n), one-dict add/subtract. Follow-up: the 26-slot array trick assumes lowercase a-z and breaks on Unicode; dict/Counter does not."
+      "notes": "SOLVED with route 2: own strToDict tally helper (the Two Sum dict move, no Counter), tally both strings, compare. All 7 tests pass. Smart details: len guard first, s == t shortcut, and the one-way dict comparison IS sufficient because the length guard makes extra keys in dict2 impossible (equal totals). Dict version is Unicode-safe, so the follow-up is answered by construction. Still optional: route 1 (sorted one-liner), route 3 (single dict add/subtract), and checking Counter agrees."
     },
     {
       "id": 226,
@@ -209,6 +209,24 @@
       "file": "problems/ConstructTreePreorderInorder.ipynb",
       "url": "https://leetcode.com/problems/construct-binary-tree-from-preorder-and-inorder-traversal/",
       "notes": "SOLVED route A same day, own algorithm designed on paper BEFORE coding: preorder[0] = root, split inorder at .index(root) into I1/I2, carry the size over to split preorder into P1/P2, recurse. Hint was one correction to their draft: they wrote root.left = P1[0] (a value, stops at depth 1) instead of root.left = buildTree(P1, I1) - the #226 leap of faith - plus the missing empty-list base case (P2[0] on a leaf = IndexError). Slice arithmetic (P[1:k+1] / P[k+1:]) they got right unaided. All 6 shape tests + 3000-node left chain pass. Bonus own work: wrote TreePreorder/TreeInorder methods, generated both traversals from a hand-built 15-node perfect tree, rebuilt it and round-tripped inorder back - the inverse-functions proof, self-invented. STILL OPEN: route B (hash map {value: index} built once + boundary indices, no slices, O(n)) and the After-it-passes questions (#106/#889 ambiguity one). Notebook has a stray scratch cell at the end reusing loop-leaked test variables, and an unused 'import pandas as pa' in the TreeNode cell."
+    },
+    {
+      "id": 155,
+      "slug": "min-stack",
+      "title": "Min Stack",
+      "difficulty": "medium",
+      "topics": ["stack", "design", "linked-list"],
+      "day": 19,
+      "date_attempted": "2026-07-24",
+      "date_solved": "2026-07-24",
+      "status": "solved",
+      "attempts": 1,
+      "used_hints": false,
+      "time_complexity": "O(1) all four ops",
+      "space_complexity": "O(n)",
+      "file": "problems/MinStack.ipynb",
+      "url": "https://leetcode.com/problems/min-stack/",
+      "notes": "SOLVED same day, first design problem. Chose route B (two stacks) but built BOTH stacks from their own linked-list Node/Stack instead of Python lists - a route-B brain on route-A machinery. Got the <= duplicate-min trap right on the first try (all 6 replay tests OK, incl. duplicate mins and the descending unwind). Correct detail: push creates TWO separate Node objects for the same value - one per stack - because each needs its own next pointer; sharing one node would tangle the chains. pop compares by value (min.head.val == stack.head.val), which is exactly right for the <= variant. Minor slack, not bugs: top/getMin return 0 on empty (contract says never called empty, so unreachable); Stack.append's is-None branch is redundant (assigning node.next = None-head then head = node covers it). Original scaffold plan: single-min-variable trap (O(n) rescan on popping the min), route A = min snapshot per node, route B = lazy min stack. After-it-passes questions still open: the aggregate-per-node pattern (MaxStack/getSum), route B worst case answer, the hidden-O(n) family, siblings #225/#232."
     },
     {
       "id": null,
