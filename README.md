@@ -36,22 +36,23 @@ a relative path that goes up one level first, e.g.
 
 ## Progress
 
-**4 solved / 10 attempted**
+**8 solved / 11 attempted**
 
 ### Problems
 
 | # | Problem | Difficulty | Day | Status |
 |---|---|---|---|---|
 | 9 | [Palindrome Number](problems/PalindromeNumber.ipynb) | Easy | 1 | in_progress |
-| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | 2 | in_progress |
+| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | 2 | ✅ solved |
 | 1 | [Two Sum](problems/TwoSum.ipynb) | Easy | 3 | ✅ solved |
 | 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | 4 | ✅ solved |
 | 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | 6 | ✅ solved |
 | 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | 7 | ✅ solved |
 | 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | 8 | todo |
 | 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | 9 | todo |
-| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | 10 | todo |
-| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | 17 | todo |
+| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | 10 | ✅ solved |
+| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | 17 | ✅ solved |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | 18 | ✅ solved |
 
 ### TP
 
