@@ -1,0 +1,52 @@
+[
+    {
+        "name": "Mohamed",
+        "age": 15,
+        "level": "L1"
+    },
+    {
+        "name": "Amine",
+        "age": 18,
+        "level": "L2"
+    },
+    {
+        "name": "Sara",
+        "age": 20,
+        "level": "L3"
+    },
+    {
+        "name": "Youssef",
+        "age": 19,
+        "level": "L2"
+    },
+    {
+        "name": "Nadia",
+        "age": 21,
+        "level": "M1"
+    },
+    {
+        "name": "Omar",
+        "age": 17,
+        "level": "L1"
+    },
+    {
+        "name": "Lina",
+        "age": 22,
+        "level": "M2"
+    },
+    {
+        "name": "Karim",
+        "age": 18,
+        "level": "L2"
+    },
+    {
+        "name": "Salma",
+        "age": 20,
+        "level": "L3"
+    },
+    {
+        "name": "Rachid",
+        "age": 23,
+        "level": "M2"
+    }
+]

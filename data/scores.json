@@ -1,0 +1,37 @@
+{
+  "class": "L3-Info",
+  "students": [
+    {
+      "name": "Amine",
+      "scores": [
+        14,
+        16,
+        11
+      ]
+    },
+    {
+      "name": "Sara",
+      "scores": [
+        18,
+        17,
+        19
+      ]
+    },
+    {
+      "name": "Omar",
+      "scores": [
+        9,
+        12,
+        10
+      ]
+    },
+    {
+      "name": "Zoé",
+      "scores": [
+        15,
+        15,
+        16
+      ]
+    }
+  ]
+}

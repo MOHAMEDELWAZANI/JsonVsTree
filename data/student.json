@@ -1,0 +1,16 @@
+{
+    "name": "Amine",
+    "age": 22,
+    "isEnrolled": true,
+    "gpa": 3.75,
+    "nickname": null,
+    "courses": [
+        "Python",
+        "Algorithms",
+        "Databases"
+    ],
+    "address": {
+        "city": "Casablanca",
+        "zip": "20000"
+    }
+}

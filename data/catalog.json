@@ -1,0 +1,102 @@
+{
+  "name": "TechMart",
+  "categories": [
+    {
+      "name": "Computers",
+      "categories": [
+        {
+          "name": "Laptops",
+          "categories": [
+            {
+              "name": "Gaming",
+              "products": [
+                {
+                  "name": "RaptorBook 15",
+                  "price": 1499,
+                  "stock": 7
+                },
+                {
+                  "name": "RaptorBook 17",
+                  "price": 1899,
+                  "stock": 3
+                }
+              ]
+            },
+            {
+              "name": "Ultrabooks",
+              "products": [
+                {
+                  "name": "AirLite 13",
+                  "price": 1099,
+                  "stock": 12
+                },
+                {
+                  "name": "AirLite 14",
+                  "price": 1299,
+                  "stock": 5
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "name": "Desktops",
+          "products": [
+            {
+              "name": "TowerPro",
+              "price": 999,
+              "stock": 4
+            },
+            {
+              "name": "MiniCube",
+              "price": 649,
+              "stock": 9
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Accessories",
+      "categories": [
+        {
+          "name": "Input",
+          "products": [
+            {
+              "name": "ClickyBoard",
+              "price": 89,
+              "stock": 40
+            },
+            {
+              "name": "GlideMouse",
+              "price": 39,
+              "stock": 65
+            }
+          ]
+        }
+      ],
+      "products": [
+        {
+          "name": "USB-C Hub",
+          "price": 45,
+          "stock": 30
+        }
+      ]
+    },
+    {
+      "name": "Audio",
+      "products": [
+        {
+          "name": "BassBuds",
+          "price": 129,
+          "stock": 22
+        },
+        {
+          "name": "StudioCans",
+          "price": 249,
+          "stock": 8
+        }
+      ]
+    }
+  ]
+}

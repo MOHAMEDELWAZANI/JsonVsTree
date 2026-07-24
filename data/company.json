@@ -1,0 +1,60 @@
+{
+  "id": 1,
+  "name": "Amine",
+  "title": "CEO",
+  "salary": 120000,
+  "reports": [
+    {
+      "id": 2,
+      "name": "Mohamed",
+      "title": "Designer",
+      "salary": 10000,
+      "reports": []
+    },
+    {
+      "id": 3,
+      "name": "Sara",
+      "title": "CTO",
+      "salary": 95000,
+      "reports": [
+        {
+          "id": 4,
+          "name": "Youssef",
+          "title": "Backend Lead",
+          "salary": 70000,
+          "reports": [
+            { "id": 5, "name": "Nadia", "title": "Backend Dev", "salary": 52000, "reports": [] },
+            { "id": 6, "name": "Omar",  "title": "Backend Dev", "salary": 50000, "reports": [] }
+          ]
+        },
+        {
+          "id": 7,
+          "name": "Lina",
+          "title": "Frontend Lead",
+          "salary": 68000,
+          "reports": [
+            { "id": 8, "name": "Karim", "title": "Frontend Dev", "salary": 48000, "reports": [] },
+            { "id": 9, "name": "Salma", "title": "Frontend Dev", "salary": 47000, "reports": [] }
+          ]
+        }
+      ]
+    },
+    {
+      "id": 10,
+      "name": "Hassan",
+      "title": "CFO",
+      "salary": 90000,
+      "reports": [
+        {
+          "id": 11,
+          "name": "Fatima",
+          "title": "Accountant",
+          "salary": 55000,
+          "reports": [
+            { "id": 12, "name": "Rachid", "title": "Junior Accountant", "salary": 38000, "reports": [] }
+          ]
+        }
+      ]
+    }
+  ]
+}

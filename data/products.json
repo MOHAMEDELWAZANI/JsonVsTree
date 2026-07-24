@@ -1,0 +1,58 @@
+[
+  {
+    "id": 1,
+    "name": "Laptop",
+    "category": "Computers",
+    "price": 12000,
+    "stock": 5
+  },
+  {
+    "id": 2,
+    "name": "Mouse",
+    "category": "Accessories",
+    "price": 150,
+    "stock": 40
+  },
+  {
+    "id": 3,
+    "name": "Keyboard",
+    "category": "Accessories",
+    "price": 300,
+    "stock": 25
+  },
+  {
+    "id": 4,
+    "name": "Monitor",
+    "category": "Computers",
+    "price": 2200,
+    "stock": 12
+  },
+  {
+    "id": 5,
+    "name": "Phone",
+    "category": "Phones",
+    "price": 8000,
+    "stock": 9
+  },
+  {
+    "id": 6,
+    "name": "Charger",
+    "category": "Accessories",
+    "price": 120,
+    "stock": 60
+  },
+  {
+    "id": 7,
+    "name": "Tablet",
+    "category": "Phones",
+    "price": 4500,
+    "stock": 7
+  },
+  {
+    "id": 8,
+    "name": "Headset",
+    "category": "Accessories",
+    "price": 450,
+    "stock": 18
+  }
+]

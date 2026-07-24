@@ -1,0 +1,72 @@
+{
+  "shop": "TechMart",
+  "currency": "MAD",
+  "orders": [
+    {
+      "id": "A1",
+      "customer": {
+        "name": "Sara",
+        "city": "Rabat"
+      },
+      "items": [
+        {
+          "product": "Laptop",
+          "qty": 1,
+          "price": 12000
+        },
+        {
+          "product": "Mouse",
+          "qty": 2,
+          "price": 150
+        }
+      ],
+      "note": "gift wrap"
+    },
+    {
+      "id": "A2",
+      "customer": {
+        "name": "Omar"
+      },
+      "items": [
+        {
+          "product": "Phone",
+          "qty": 1,
+          "price": 8000
+        }
+      ]
+    },
+    {
+      "id": "A3",
+      "customer": {
+        "name": "Lina",
+        "city": "Casablanca"
+      },
+      "items": [
+        {
+          "product": "Keyboard",
+          "qty": 3,
+          "price": 300
+        },
+        {
+          "product": "Headset",
+          "qty": 1,
+          "price": 450
+        },
+        {
+          "product": "Charger",
+          "qty": 2,
+          "price": 120
+        }
+      ],
+      "note": "call before delivery"
+    },
+    {
+      "id": "A4",
+      "customer": {
+        "name": "Karim",
+        "city": "Fes"
+      },
+      "items": []
+    }
+  ]
+}

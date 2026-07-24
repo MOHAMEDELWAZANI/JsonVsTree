@@ -1,0 +1,67 @@
+{
+  "library": "Bibliothèque Centrale",
+  "sections": [
+    {
+      "name": "Informatique",
+      "shelves": [
+        {
+          "code": "I-1",
+          "books": [
+            {
+              "title": "Clean Code",
+              "author": "Robert Martin",
+              "pages": 464,
+              "year": 2008
+            },
+            {
+              "title": "Python Crash Course",
+              "author": "Eric Matthes",
+              "pages": 544
+            }
+          ]
+        },
+        {
+          "code": "I-2",
+          "books": [
+            {
+              "title": "Algorithms",
+              "author": "Sedgewick",
+              "pages": 976,
+              "year": 2011
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Mathématiques",
+      "shelves": [
+        {
+          "code": "M-1",
+          "books": [
+            {
+              "title": "Calculus",
+              "author": "Stewart",
+              "pages": 1368,
+              "year": 2015
+            },
+            {
+              "title": "Linear Algebra",
+              "author": "Strang",
+              "pages": 600,
+              "year": 2016
+            },
+            {
+              "title": "Probabilités",
+              "author": "Dupont",
+              "pages": 320
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "name": "Archives"
+    }
+  ]
+}
