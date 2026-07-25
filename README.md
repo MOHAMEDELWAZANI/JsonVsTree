@@ -36,7 +36,7 @@ a relative path that goes up one level first, e.g.
 
 ## Progress
 
-**10 solved / 12 attempted**
+**11 solved / 13 attempted**
 
 ### Problems
 
@@ -54,6 +54,7 @@ a relative path that goes up one level first, e.g.
 | 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | ✅ solved |
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | ✅ solved |
 | 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved |
+| 355 | [Design Twitter](problems/DesignTwitter.ipynb) | Medium | ✅ solved |
 
 ### TP
 
