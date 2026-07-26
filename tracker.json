@@ -297,6 +297,28 @@
       "notes": "ATTEMPT 1 (2026-07-25): invented the PUSH model (fan-out-on-write, materialized per-user feeds) all alone - the architecture real Twitter actually uses. 4/8 tests fail, each traceable to a skipped scaffold question: no global clock (Q2) so follow() prepends followee posts un-interleaved (tests 6/8); no cap at 10 (test 3); unfollow filters the stored feed by 'value in followee posts' so self-unfollow wipes own tweets (Q4 trap, test 4); and the SAME Node object is appended into multiple feeds stacks, rewiring .next and cross-corrupting chains - the exact two-Node lesson from #155. Also: follow stored as linked list not set (Q1), postTweet fan-out scans all users O(U*F). Advice given: push model needs timestamps anyway; with timestamps the pull model (route A) makes the stored feeds unnecessary. ATTEMPTS 2-3: now 6/8. Fixed the self-follow trap (followeeId != followerId guard - legit, constraints promise it) and the getLast10 off-by-one (s<10). Remaining failures are tests 6 and 8, one root cause: NO CLOCK - Node stores only tweetId, so follow() block-prepends the followee's posts and cannot interleave by time (info doesn't exist in the program). Shared-Node fan-out landmine still unexploded (same feeds Node appended into multiple stacks rewires .next). ATTEMPT 4 (2026-07-26): added the clock (self.t ticked in postTweet, Node gains .t) - test 6 now passes, and addingStack was rewritten to merge-by-timestamp instead of block-prepend. Shared-Node fan-out bug also fixed (fresh Node per follower). Also invented a duplicate-follow guard, genuinely needed in the push model (a second follow would re-merge the same posts). ONE crash left: that guard reads self.DB[followerId] before checking the key exists, so test 7's opening follow(2,1) on an empty DB raises KeyError and aborts the run. Verified locally: with the guard reordered, all 8 tests pass. ATTEMPT 5: same KeyError - tried to guard with 'if self.DB[followerId] and ...', but that subscript IS the crash; needed the membership test 'followerId in self.DB'. Teaching point: d[k] raises KeyError, k in d returns False; 'and' short-circuits but cannot save an operand that raises while being evaluated. ATTEMPT 6: local suite went 8/8 but LeetCode rejected it - guard now uses the right operator but the WRONG VARIABLE: 'if followeeId in self.DB and ... self.DB[followerId]...'. Checks the followee's key, subscripts with the follower's. Local test 7 hid it because its follow() is the first op ever (DB empty, so the check short-circuits); LeetCode hit the case where the followee exists and the follower does not. Repro added as a 9th test cell: postTweet(1,5) then follow(2,1) -> KeyError 2. Verified: swapping that one identifier to followerId makes all 9 pass. ACCEPTED on LeetCode 2026-07-26, 21/21, runtime 7ms (beats 91.4%), memory 30.02MB (beats 5.65%) - the memory score IS the push model's signature: every tweet copied into every follower's feed and never trimmed. Final bug was the wrong identifier in the existence guard; they fixed it themselves. NOTE: the saved notebook still carried the pre-fix guard when this was recorded (fix was made in the LeetCode editor) - re-save the notebook so the file matches. V2 cells added by me on request: TwitterPull (route A, pull model, setdefault on write / .get on read so reads never mutate, last-10 slice before sort) and TwitterHeap (route B, k-way merge with heapq, -time for newest-first, never touches a source's 11th tweet). Both verified against all 9 tests."
     },
     {
+      "id": 382,
+      "slug": "linked-list-random-node",
+      "title": "Linked List Random Node",
+      "difficulty": "medium",
+      "topics": [
+        "linked-list",
+        "math",
+        "reservoir-sampling",
+        "randomized"
+      ],
+      "date_attempted": null,
+      "date_solved": null,
+      "status": "todo",
+      "attempts": 0,
+      "used_hints": false,
+      "time_complexity": null,
+      "space_complexity": null,
+      "file": "problems/LinkedListRandomNode.ipynb",
+      "url": "https://leetcode.com/problems/linked-list-random-node/",
+      "notes": "Added 2026-07-26. First RANDOMIZED problem in the repo. Route A: snapshot values into a list in __init__, random index per call - O(n) space, O(1) per call, accepted but ignores the follow-up. Route B: reservoir sampling - keep one candidate, at node i (1-based) replace with probability 1/i; O(1) space, O(n) per call, works on a stream of unknown length. Scaffold walks them through deriving it (hand-proof for n=3, then the telescoping product (1/j) * prod (i-1)/i = 1/n). Test harness is statistical, not exact: 60000 calls, counts must sit within 5 sigma of trials/n, fixed seed for determinism - verified that 4 correct implementations pass across 6 list shapes and 5 seeds, and that always-head / coin-flip-1/2 / shifted-counter biases are all caught by hundreds of sigmas. Also covers question 7: getRandom returns VALUES, so [1,1,2] gives value 1 about 66.7% - still uniform over nodes."
+    },
+    {
       "id": null,
       "slug": "tp-json-catalog",
       "title": "TP - Store Catalog (recursion over JSON)",

@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/ascii-art.svg" alt="Kung Fu Panda ASCII art" width="880">
+</p>
+
 # LeetCode Practice
 
 My problem-solving journey in Python. Started **2026-07-20**.
@@ -55,6 +59,7 @@ a relative path that goes up one level first, e.g.
 | 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | ✅ solved |
 | 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved |
 | 355 | [Design Twitter](problems/DesignTwitter.ipynb) | Medium | ✅ solved |
+| 382 | [Linked List Random Node](problems/LinkedListRandomNode.ipynb) | Medium | todo |
 
 ### TP
 
