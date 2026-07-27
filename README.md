@@ -16,7 +16,7 @@ Problems/
 ├─ tp/              practical exercises (TP) - bigger, multi-part, not from LeetCode
 ├─ learn_json/      learning track: the json module, from zero
 ├─ projects/        real projects built out of what I learned
-└─ data/            input files the notebooks read (.json, .csv, .txt)
+└─ data/            input files the notebooks read (.json, .csv, .txt, images)
 ```
 
 > The folder is `learn_json/`, **not** `json/`. A folder named `json` sitting next
@@ -60,6 +60,9 @@ a relative path that goes up one level first, e.g.
 | 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved |
 | 355 | [Design Twitter](problems/DesignTwitter.ipynb) | Medium | ✅ solved |
 | 382 | [Linked List Random Node](problems/LinkedListRandomNode.ipynb) | Medium | todo |
+| 379 | [Design Phone Directory](problems/DesignPhoneDirectory.ipynb) | Medium | todo |
+| 622 | [Design Circular Queue](problems/DesignCircularQueue.ipynb) | Medium | todo |
+| 707 | [Design Linked List](problems/DesignLinkedList.ipynb) | Medium | todo |
 
 ### TP
 
@@ -83,4 +86,13 @@ this is done.
 
 ### Projects
 
-_Nothing yet._
+| # | Project | Stack | Guide | Status |
+|---|---|---|---|---|
+| 1 | Org Chart Manager | Flask + SQLite | [PROJECT_1_GUIDE.md](projects/PROJECT_1_GUIDE.md) | not started |
+| 2 | [Plant Disease Cascade](../ClassificationDesPlantes/plantdisease/) | PyTorch, CNN | [PROJECT_2_GUIDE.md](../ClassificationDesPlantes/PROJECT_2_GUIDE.md) | not started |
+
+Project 2 is a from-scratch rebuild of the June 2025 Keras project: a leaf photo
+in, plant + disease out, over 25 classes and 31 397 images. The 2025 results are
+kept in `../ClassificationDesPlantes/plantdisease/baseline_2025/` as the target (**89.42%** end to
+end), and the images are in `../ClassificationDesPlantes/plantes/` — a 9 MB sample committed, the 542 MB
+full split gitignored.

@@ -319,6 +319,70 @@
       "notes": "Added 2026-07-26. First RANDOMIZED problem in the repo. Route A: snapshot values into a list in __init__, random index per call - O(n) space, O(1) per call, accepted but ignores the follow-up. Route B: reservoir sampling - keep one candidate, at node i (1-based) replace with probability 1/i; O(1) space, O(n) per call, works on a stream of unknown length. Scaffold walks them through deriving it (hand-proof for n=3, then the telescoping product (1/j) * prod (i-1)/i = 1/n). Test harness is statistical, not exact: 60000 calls, counts must sit within 5 sigma of trials/n, fixed seed for determinism - verified that 4 correct implementations pass across 6 list shapes and 5 seeds, and that always-head / coin-flip-1/2 / shifted-counter biases are all caught by hundreds of sigmas. Also covers question 7: getRandom returns VALUES, so [1,1,2] gives value 1 about 66.7% - still uniform over nodes."
     },
     {
+      "id": 379,
+      "slug": "design-phone-directory",
+      "title": "Design Phone Directory",
+      "difficulty": "medium",
+      "topics": [
+        "linked-list",
+        "hash-table",
+        "design",
+        "queue"
+      ],
+      "date_attempted": null,
+      "date_solved": null,
+      "status": "todo",
+      "attempts": 0,
+      "used_hints": false,
+      "time_complexity": null,
+      "space_complexity": null,
+      "file": "problems/DesignPhoneDirectory.ipynb",
+      "url": "https://leetcode.com/problems/design-phone-directory/",
+      "notes": "Added 2026-07-26. Third design problem (after #155, #355), and the smallest: three methods, all O(1) with the right container. Route A: self.free = set(range(maxNumbers)) - get() = free.pop() (arbitrary element, which is all the statement asks for), check = membership, release = add; release is idempotent for free because a set cannot hold a duplicate. Route B (what the linked-list tag points at): free numbers in a deque/own linked list PLUS a boolean-per-slot flag array - the queue answers get() in O(1) but cannot answer check(), the flag array answers check() but cannot answer get(), so route B is both side by side and every method must update both. Central trap (scaffold Q4): with a queue-only pool, release(0) twice pushes 0 twice and get() hands the same number to two callers - the flag array is the guard. Scaffold also covers Q1 (boolean-list-only forces an O(n) scan in get: 10^4 slots x 2*10^4 calls) and Q6 (O(1) constructor: counter of never-used + set of recycled, check() then has TWO cases - left as the After-it-passes exercise). Test harness cannot use fixed expected outputs because get() may return ANY free number: replay() walks a referee set beside the class and asserts get() returns an int currently free / -1 exactly when empty / check() agrees call-for-call, plus stress() for seeded random op sequences. Verified: 4 correct versions (set, deque+flags FIFO, stack+flags LIFO, lazy O(1)-init) pass all 11 checks and 60 (size,seed) stress combos; 8 broken versions all caught (queue-without-flags double-release, check-consumes, get-without-remove, 0-instead-of--1 when empty, 1..n off-by-one, inverted check, missing return, no-op release). Timing at the constraint ceiling (10^4 slots, 2*10^4 calls): set 0.03s vs Q1's scanning version 1.1s. Siblings pointed at: #380 Insert Delete GetRandom O(1) (= this + #382's uniform-random promise, which set.pop() does NOT give - it is arbitrary, not random), #146, #622, #705."
+    },
+    {
+      "id": 622,
+      "slug": "design-circular-queue",
+      "title": "Design Circular Queue",
+      "difficulty": "medium",
+      "topics": [
+        "array",
+        "linked-list",
+        "design",
+        "queue"
+      ],
+      "date_attempted": null,
+      "date_solved": null,
+      "status": "todo",
+      "attempts": 0,
+      "used_hints": false,
+      "time_complexity": null,
+      "space_complexity": null,
+      "file": "problems/DesignCircularQueue.ipynb",
+      "url": "https://leetcode.com/problems/design-circular-queue/",
+      "notes": "Added 2026-07-26. Fourth design problem, and the sibling #379's notebook points at. Fixed capacity k, seven methods, all O(1), O(k) space allocated once. THE question (scaffold Q2): with only head and tail indices, head == tail means both empty AND full - the information is not there, so you must store one more thing; three valid tie-breakers (a count, one deliberately wasted slot in a k+1 array, or a boolean full flag) and the scaffold makes them pick one and cost the others. Route A: self.q = [0]*k + head + count; enQueue writes at (head+count)%k, Rear reads (head+count-1)%k. Route B (the linked-list tag): a CIRCULAR list of exactly k nodes built once in __init__, front/rear/count pointers, nothing allocated after construction - the punchline being that (i+1)%k and node.next are the same operation, so the modulo WAS the ring all along. Traps covered: 0 is a legal value so any truthiness check ('or -1', 'if self.front:') breaks - has its own test case; -1 as the empty sentinel is only safe because 0 <= value (same reasoning as #379's get()); Python's -1 % 3 == 2 makes the Rear expression work where C would not; and pop(0)/insert(0,) is the repo's recurring O(n)-hidden-in-a-friendly-call family (#103 insert(0,x), #105 .index(), #155 min()). Harness: run(ops,args) replay against fixed expected outputs (deterministic again, unlike #382's statistical harness and #379's referee) over 8 cases - LeetCode example, k=1 fence-posts, all-methods-on-empty, the wrap, the drained-after-full ambiguity, deQueue past empty, value 0, five laps around a 3-slot ring - plus stress() which replays random calls against ModelQueue (an append/pop(0) oracle: slow is fine for an oracle, and it is in the test file precisely because it must not be in the answer) at k=1,2,3,7,1000. Bool methods are also type-checked, which is what catches a missing return. Verified: 4 correct designs (count / ring-of-nodes / wasted-slot / flag) all pass 13 checks; 8 broken versions all caught (no tie-breaker, flag never cleared, Rear off by one, missing modulo, 'or -1' on a stored 0, missing return, 0 instead of -1 when empty, isFull off by one). NOTE stated in the notebook: a pop(0) solution passes every test (3000 calls at k=1000 is too small to time), so the harness cannot enforce O(1) - Q6 is the only guard. Siblings pointed at: #641 Circular Deque (same class + insertFront/deleteLast), #232, #225, #146; plus deque(maxlen=n) as the same structure with the opposite full-buffer policy (drops the oldest instead of refusing)."
+    },
+    {
+      "id": 707,
+      "slug": "design-linked-list",
+      "title": "Design Linked List",
+      "difficulty": "medium",
+      "topics": [
+        "linked-list",
+        "design"
+      ],
+      "date_attempted": null,
+      "date_solved": null,
+      "status": "todo",
+      "attempts": 0,
+      "used_hints": false,
+      "time_complexity": null,
+      "space_complexity": null,
+      "file": "problems/DesignLinkedList.ipynb",
+      "url": "https://leetcode.com/problems/design-linked-list/",
+      "notes": "Added 2026-07-26. The capstone of the linked-list track - they have already built pieces of this class in #104 (queue with first/last), #103 (addFirst in O(1)), #155 (stack), #622 (ring of nodes); 707 is all of it with an INDEX api. No new algorithm; the difficulty is the contract. Q1 makes them tabulate the three index rules, which differ per method: get valid 0..size-1 else -1; addAtIndex valid 0..size (index == size means append, index > size is a NO-OP not a clamp); deleteAtIndex valid 0..size-1 else no-op. Q2-Q3 derive the SENTINEL: to insert before i you need the node at i-1, which does not exist for i == 0, so either addAtHead/addAtIndex(0) become special cases or you add one dummy node at the front and 'the node before index 0' becomes the dummy itself - then insert-at-0 and insert-at-size run the same code with no if. Q4 size field vs walking to count; Q5 is the doubly-linked argument in one trace (singly + tail pointer, then deleteAtIndex(size-1): tail must move back one and you cannot get there in O(1)); Q6 two sentinels means ZERO None checks in the splice; Q7 the cost table vs Python list plus why the stdlib ships no linked list and what deque adds; Q8 sets up the harness. Route A: singly + one sentinel + size, addAtHead = addAtIndex(0), addAtTail = addAtIndex(size), splicing written once - accepted. Route B: doubly with a sentinel at BOTH ends, wired head.next=tail/tail.prev=head at construction, so insert is always the same four assignments and delete two, addAtTail O(1), get O(min(i, n-i)) walking from the nearer end. Sentinels framed as the repo's recurring move: pay once in state to stop paying in special cases (#155 per-node min, #355 clock, #622 count). HARNESS is the interesting part: four of five methods return None, so corruption is invisible at the call that causes it - check() therefore replays against a Python list model and after EVERY call reads the whole list back via get(0..size-1) plus get(size) which must be -1 (that probe is what catches a size out of step with the nodes), and every exception is caught and reported as a FAIL line with the offending call. 11 fixed cases (LeetCode example, all methods on empty, addAtIndex at size vs past size, addAtIndex(0) on a non-empty list, delete head/tail/middle, delete-last-then-addAtTail, delete-only-element, ten addAtHead, drain from front, drain from back, value 0) + seeded random stress at 50/200/500/2000 calls. Verified: 4 correct designs pass 15/15 (singly+sentinel, doubly+2 sentinels, singly+maintained tail, and a Python-list wrapper - which passes, stated out loud in the notebook: the nodes are the assignment); 9 broken versions all caught AT the causing call (get without upper bound -> AttributeError, addAtIndex refusing index == size, clamping index > size instead of ignoring, delete without size--, insert AFTER index, stale tail after deleting last, get without return, deleteAtIndex(0) ignored, and no-sentinel insert-at-0 landing at index 1 - that last one is only caught by the named addAtIndex(0) case, which is why it was added). Siblings pointed at: #146 LRU Cache (route B + a dict IS an LRU cache - the reason to do 707 properly), #1472 Browser History, #641, #206 (add reverse() to your own class and keep size/tail consistent)."
+    },
+    {
       "id": null,
       "slug": "tp-json-catalog",
       "title": "TP - Store Catalog (recursion over JSON)",
@@ -487,6 +551,32 @@
       "data_file": "data/library.json",
       "url": null,
       "notes": "Part A: JSONDecodeError (subclass of ValueError) on single quotes / trailing comma / unquoted key / None instead of null / empty string - each message and its line+col verified. Part B: library.json, 3 levels (section -> shelf -> book); the Archives section has NO 'shelves' key and 2 books have no 'year'. Verified: 6 books, 4272 pages, missing year ['Python Crash Course','Probabilites'], oldest Clean Code 2008, books per section {Informatique:3, Mathematiques:3, Archives:0}, find_book('Algorithms') -> ('Informatique','I-2'), find_book('Dune') -> None, flatten -> 6 records. Ex3 (carry the path down while descending) is the warm-up for the Org Chart chain-of-command exercise."
+    },
+    {
+      "id": null,
+      "slug": "project-2-plant-disease-cascade",
+      "title": "Project 2 - Plant Disease Cascade (PyTorch rebuild)",
+      "difficulty": "hard",
+      "type": "project",
+      "topics": [
+        "deep-learning",
+        "pytorch",
+        "cnn",
+        "image-classification",
+        "evaluation"
+      ],
+      "date_attempted": null,
+      "date_solved": null,
+      "status": "todo",
+      "attempts": 0,
+      "used_hints": false,
+      "time_complexity": null,
+      "space_complexity": null,
+      "file": "projects/plantdisease/README.md",
+      "guide": "projects/PROJECT_2_GUIDE.md",
+      "data_file": "data/plantes/",
+      "url": null,
+      "notes": "Added 2026-07-26. From-scratch rebuild of the June 2025 Keras project (~/Desktop/Projects/P1/Mohamed_Wazane_Mohamed_Elmahadi_Sidi/Machine Learning) in PyTorch on CPU (py3.14, torch 2.13 CPU wheels, 8 cores, no GPU). Data moved into data/plantes/: split/ = the full 542 MB / 31397 images / 25 leaf classes / 5 plants / 256x256 JPEG, 80-10-10 per class (25108/3132/3157), GITIGNORED; sample/ = 500 images (12/4/4 per class, first N sorted, deterministic) COMMITTED so every script runs without the big set, with sample_manifest.json listing every file; classes_2025/ = the 6 Keras class_indices JSONs. 2025 baseline kept read-only in projects/plantdisease/baseline_2025/ (6 classification reports + confusion matrices, training curves before/after their overfitting fix, rapport_erreurs.txt with all 334 cascade errors). Baseline to beat, verified on the SAME test split (support columns match exactly, so comparisons are apples-to-apples): modele1 plant 96% (3157), tomate 92% (1825), mais 88% (388), pommier 94% (319), pomme_de_terre 96% (216), vigne 96% (409), cascade end-to-end 89.42% (334 errors). Floors worth quoting: chance 4%, always-tomate/tylcv 17%. CENTRAL QUESTION for the rebuild: does the 2-stage cascade beat a single flat 25-class model? Never tested in 2025. The cascade's ceiling IS stage 1: P(both) = P(plant) x P(disease|plant), 0.96 x 0.93 ~ 0.89 = exactly the measured 89.42%. Four things found reading the old code, all in the guide as exercises: (1) five near-identical per-plant training scripts instead of one function; (2) epochs=2 and rescale-only, while rapport/chapters/tests.tex claims dropout 0.3-0.5 / augmentation / early stopping / L1-L2 and contains placeholder tables from a different (game) project - hence the rule 'every number in the writeup comes from a script in reports/'; (3) evaluation_modele_final.py loads the TRUE plant's disease model and marks stage-1 misses as plante/unknown - legitimate (when stage 1 is right, true model == predicted model) but worth proving; (4) mais_modele.h5 is 1.1 GB vs 33 MB siblings -> ~287M float32 slots, Adam keeps 2 extra per weight, so the Flatten->Dense head is the suspect; the guide requires AdaptiveAvgPool2d instead. Data flaws found and verified by me: class imbalance 35:1 (tomate/tylcv 5357 vs pomme_de_terre/saine 152) and tomato = 18160/31397 of everything; exactly 4 cross-split duplicate images (same md5, different UUID prefix, same id after '___' - md5 and suffix checks agree), so step 1's leakage check has a real finding but only ~0.1% numeric impact. Guide = projects/PROJECT_2_GUIDE.md, 7 steps: 0 skeleton+seeds, 1 explore/stats/duplicates, 2 own Dataset + label maps, 3 flat 25-class baseline with hand-written training loop + overfit-one-batch gate, 4 cascade from one loop over 6 configs + propagation arithmetic, 5 evaluation (macro vs weighted F1, 25x25 confusion, error list, stage-1-vs-stage-2 error split), 6 predict.py with a confidence threshold then the app (load models once, not per click - the 2025 app reloaded 2 models per prediction), 7 REPORT.md. Stretch: resnet18 transfer learning (likely the real jump past 89.42%), imbalance handling, augmentation ablation, Grad-CAM, model size, pytest on the data."
     }
   ]
 }
