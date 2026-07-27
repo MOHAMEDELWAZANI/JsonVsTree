@@ -13,6 +13,7 @@ Problems/
 ├─ README.md        this index
 ├─ tracker.json     the source of truth (status, difficulty, dates, complexity)
 ├─ problems/        one notebook per LeetCode problem
+├─ database_problems/  SQL problems - each notebook runs your query against a real SQLite db
 ├─ tp/              practical exercises (TP) - bigger, multi-part, not from LeetCode
 ├─ learn_json/      learning track: the json module, from zero
 ├─ projects/        real projects built out of what I learned
@@ -63,6 +64,36 @@ a relative path that goes up one level first, e.g.
 | 379 | [Design Phone Directory](problems/DesignPhoneDirectory.ipynb) | Medium | todo |
 | 622 | [Design Circular Queue](problems/DesignCircularQueue.ipynb) | Medium | todo |
 | 707 | [Design Linked List](problems/DesignLinkedList.ipynb) | Medium | todo |
+| 148 | [Sort List](problems/SortList.ipynb) | Medium | todo |
+| 1603 | [Design Parking System](problems/DesignParkingSystem.ipynb) | Easy | todo |
+| 933 | [Number of Recent Calls](problems/NumberOfRecentCalls.ipynb) | Easy | todo |
+| 359 | [Logger Rate Limiter](problems/LoggerRateLimiter.ipynb) | Easy | todo |
+| 535 | [Encode and Decode TinyURL](problems/EncodeDecodeTinyURL.ipynb) | Medium | todo |
+| 1396 | [Design Underground System](problems/DesignUndergroundSystem.ipynb) | Medium | todo |
+| 362 | [Design Hit Counter](problems/DesignHitCounter.ipynb) | Medium | todo |
+| 1472 | [Design Browser History](problems/DesignBrowserHistory.ipynb) | Medium | todo |
+| 1244 | [Design A Leaderboard](problems/DesignALeaderboard.ipynb) | Medium | todo |
+| 146 | [LRU Cache](problems/LRUCache.ipynb) | Medium | todo |
+| 295 | [Find Median from Data Stream](problems/FindMedianFromDataStream.ipynb) | Hard | todo |
+
+### Database (SQL)
+
+Each notebook builds a real **SQLite** database in memory, runs whatever query you put
+in `SOLUTION`, and compares the rows *and* the column names. Nothing is pattern-matched.
+LeetCode grades MySQL; where the two engines differ, the notebook says so.
+
+| # | Problem | Difficulty | What it teaches | Status |
+|---|---|---|---|---|
+| 175 | [Combine Two Tables](database_problems/175_CombineTwoTables.ipynb) | Easy | `LEFT JOIN` vs `JOIN` | todo |
+| 181 | [Employees Earning More Than Their Managers](database_problems/181_EmployeesEarningMoreThanManagers.ipynb) | Easy | self join, `NULL` comparison | todo |
+| 182 | [Duplicate Emails](database_problems/182_DuplicateEmails.ipynb) | Easy | `GROUP BY` / `HAVING` | todo |
+| 183 | [Customers Who Never Order](database_problems/183_CustomersWhoNeverOrder.ipynb) | Easy | **the `NOT IN` + `NULL` trap** | todo |
+| 196 | [Delete Duplicate Emails](database_problems/196_DeleteDuplicateEmails.ipynb) | Easy | `DELETE`, MySQL error 1093 | todo |
+| 176 | [Second Highest Salary](database_problems/176_SecondHighestSalary.ipynb) | Medium | "no rows" is not `null` | todo |
+| 180 | [Consecutive Numbers](database_problems/180_ConsecutiveNumbers.ipynb) | Medium | self join vs `LAG` | todo |
+| 184 | [Department Highest Salary](database_problems/184_DepartmentHighestSalary.ipynb) | Medium | `GROUP BY` vs `PARTITION BY` | todo |
+| 185 | [Department Top Three Salaries](database_problems/185_DepartmentTopThreeSalaries.ipynb) | Hard | `DENSE_RANK` vs `RANK` vs `ROW_NUMBER` | todo |
+| 262 | [Trips and Users](database_problems/262_TripsAndUsers.ipynb) | Hard | four requirements at once | todo |
 
 ### TP
 
