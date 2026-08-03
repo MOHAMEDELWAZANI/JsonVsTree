@@ -41,40 +41,41 @@ a relative path that goes up one level first, e.g.
 
 ## Progress
 
-**11 solved / 13 attempted**
+**13 solved / 16 attempted**
 
 ### Problems
 
-| # | Problem | Difficulty | Status |
-|---|---|---|---|
+| # | Problem | Difficulty | Status      |
+|---|---|---|-------------|
 | 9 | [Palindrome Number](problems/PalindromeNumber.ipynb) | Easy | in_progress |
-| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | ✅ solved |
-| 1 | [Two Sum](problems/TwoSum.ipynb) | Easy | ✅ solved |
-| 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | ✅ solved |
-| 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | ✅ solved |
-| 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | ✅ solved |
-| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | ✅ solved |
-| 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | todo |
-| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | ✅ solved |
-| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | ✅ solved |
-| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | ✅ solved |
-| 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved |
-| 355 | [Design Twitter](problems/DesignTwitter.ipynb) | Medium | ✅ solved |
-| 382 | [Linked List Random Node](problems/LinkedListRandomNode.ipynb) | Medium | todo |
-| 379 | [Design Phone Directory](problems/DesignPhoneDirectory.ipynb) | Medium | todo |
-| 622 | [Design Circular Queue](problems/DesignCircularQueue.ipynb) | Medium | todo |
-| 707 | [Design Linked List](problems/DesignLinkedList.ipynb) | Medium | todo |
-| 148 | [Sort List](problems/SortList.ipynb) | Medium | todo |
-| 1603 | [Design Parking System](problems/DesignParkingSystem.ipynb) | Easy | todo |
-| 933 | [Number of Recent Calls](problems/NumberOfRecentCalls.ipynb) | Easy | todo |
-| 359 | [Logger Rate Limiter](problems/LoggerRateLimiter.ipynb) | Easy | todo |
-| 535 | [Encode and Decode TinyURL](problems/EncodeDecodeTinyURL.ipynb) | Medium | todo |
-| 1396 | [Design Underground System](problems/DesignUndergroundSystem.ipynb) | Medium | todo |
-| 362 | [Design Hit Counter](problems/DesignHitCounter.ipynb) | Medium | todo |
-| 1472 | [Design Browser History](problems/DesignBrowserHistory.ipynb) | Medium | todo |
-| 1244 | [Design A Leaderboard](problems/DesignALeaderboard.ipynb) | Medium | todo |
-| 146 | [LRU Cache](problems/LRUCache.ipynb) | Medium | todo |
-| 295 | [Find Median from Data Stream](problems/FindMedianFromDataStream.ipynb) | Hard | todo |
+| 125 | [Valid Palindrome](problems/PalindromeString.ipynb) | Easy | ✅ solved   |
+| 1 | [Two Sum](problems/TwoSum.ipynb) | Easy | ✅ solved   |
+| 104 | [Maximum Depth of Binary Tree](problems/MaxDepthBinaryTree.ipynb) | Easy | ✅ solved   |
+| 102 | [Level Order Traversal](problems/LevelOrderTraversal.ipynb) | Medium | ✅ solved   |
+| 103 | [Zigzag Level Order Traversal](problems/ZigzagLevelOrder.ipynb) | Medium | ✅ solved   |
+| 242 | [Valid Anagram](problems/ValidAnagram.ipynb) | Easy | ✅ solved   |
+| 226 | [Invert Binary Tree](problems/InvertBinaryTree.ipynb) | Easy | todo        |
+| 206 | [Reverse Linked List](problems/ReverseLinkedList.ipynb) | Easy | ✅ solved   |
+| 114 | [Flatten Binary Tree to Linked List](problems/FlattenBinaryTree.ipynb) | Medium | ✅ solved   |
+| 105 | [Construct Binary Tree from Preorder and Inorder Traversal](problems/ConstructTreePreorderInorder.ipynb) | Medium | ✅ solved   |
+| 155 | [Min Stack](problems/MinStack.ipynb) | Medium | ✅ solved   |
+| 355 | [Design Twitter](problems/DesignTwitter.ipynb) | Medium | ✅ solved   |
+| 382 | [Linked List Random Node](problems/LinkedListRandomNode.ipynb) | Medium | todo        |
+| 379 | [Design Phone Directory](problems/DesignPhoneDirectory.ipynb) | Medium | ✅ solved   |
+| 622 | [Design Circular Queue](problems/DesignCircularQueue.ipynb) | Medium | todo        |
+| 707 | [Design Linked List](problems/DesignLinkedList.ipynb) | Medium | todo        |
+| 148 | [Sort List](problems/SortList.ipynb) | Medium | todo        |
+| 1603 | [Design Parking System](problems/DesignParkingSystem.ipynb) | Easy | todo        |
+| 933 | [Number of Recent Calls](problems/NumberOfRecentCalls.ipynb) | Easy | todo        |
+| 359 | [Logger Rate Limiter](problems/LoggerRateLimiter.ipynb) | Easy | todo        |
+| 535 | [Encode and Decode TinyURL](problems/EncodeDecodeTinyURL.ipynb) | Medium | todo        |
+| 1396 | [Design Underground System](problems/DesignUndergroundSystem.ipynb) | Medium | todo        |
+| 362 | [Design Hit Counter](problems/DesignHitCounter.ipynb) | Medium | todo        |
+| 1472 | [Design Browser History](problems/DesignBrowserHistory.ipynb) | Medium | todo        |
+| 1244 | [Design A Leaderboard](problems/DesignALeaderboard.ipynb) | Medium | ✅ solved   |
+| 146 | [LRU Cache](problems/LRUCache.ipynb) | Medium | todo        |
+| 295 | [Find Median from Data Stream](problems/FindMedianFromDataStream.ipynb) | Hard | todo        |
+| — | [Red-Black Tree](problems/RedBlackTree.ipynb) | Hard | ✅ solved       |
 
 ### Database (SQL)
 
