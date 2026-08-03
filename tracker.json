@@ -3,7 +3,7 @@
  "started_on": "2026-07-20",
  "last_updated": "2026-08-03",
  "stats": {
-  "total_attempted": 15,
+  "total_attempted": 16,
   "total_solved": 13,
   "by_difficulty": {
    "easy": {
@@ -15,7 +15,7 @@
     "solved": 8
    },
    "hard": {
-    "attempted": 0,
+    "attempted": 1,
     "solved": 0
    }
   }
@@ -1024,16 +1024,16 @@
     "design",
     "rotations"
    ],
-   "date_attempted": null,
+   "date_attempted": "2026-08-03",
    "date_solved": null,
-   "status": "todo",
-   "attempts": 0,
+   "status": "in_progress",
+   "attempts": 1,
    "used_hints": false,
    "time_complexity": null,
    "space_complexity": null,
    "file": "problems/RedBlackTree.ipynb",
    "url": "https://en.wikipedia.org/wiki/Red%E2%80%93black_tree",
-   "notes": "Added 2026-08-03 by request - they built one in C before and want it back in Python. Custom problem (not on LeetCode): full RedBlackTree class - insert/search/delete keeping the five rules, all O(log n). Scaffold corrects a memory slip: 'left rotation / left-right rotation' as THE toolkit is AVL vocabulary; red-black adds the recolor-only red-uncle case (the zig-zag double rotation is their 'left-right' memory). Two phases: A insert+fixup (red uncle -> recolor+climb; black uncle -> straighten zig-zag, one rotation, swap colors), B delete (transplant + successor + double-black sibling cases; NIL sentinel recommended - the C trick). Harness contract: tree.root, node .key/.left/.right/.color 'R'/'B'; None or key-None sentinel both count as black leaves; parent pointers not read. No expected-output lists (many legal trees hold the same keys - same reason as #379): validate() re-derives all five rules + inorder-sorted + contents-vs-referee-set + the 2*log2(n+1) height bound after EVERY mutation; failures print the op log, broken rule, and a sideways color dump. 13 named cases (7 insert incl. climb-1..15 and both zig-zags, 6 delete incl. red leaf / one-red-child / double black / successor surgery / drain-to-empty / absent-key no-op), a 300-ordered-insert climb, 4 seeded stress mixes up to 3000 ops on 10^4 keys. Verified: reference CLRS implementation passes 18/18 in ~2.8s; five broken versions all caught (no insert fixup, no delete fixup, all-black plain BST -> height bound snaps, no-op delete, lying search). Siblings pointed at: #98, #110, #450, #701."
+   "notes": "Added 2026-08-03 by request - they built one in C before and want it back in Python. Custom problem (not on LeetCode): full RedBlackTree class - insert/search/delete keeping the five rules, all O(log n). Scaffold corrects a memory slip: 'left rotation / left-right rotation' as THE toolkit is AVL vocabulary; red-black adds the recolor-only red-uncle case (the zig-zag double rotation is their 'left-right' memory). Two phases: A insert+fixup (red uncle -> recolor+climb; black uncle -> straighten zig-zag, one rotation, swap colors), B delete (transplant + successor + double-black sibling cases; NIL sentinel recommended - the C trick). Harness contract: tree.root, node .key/.left/.right/.color 'R'/'B'; None or key-None sentinel both count as black leaves; parent pointers not read. No expected-output lists (many legal trees hold the same keys - same reason as #379): validate() re-derives all five rules + inorder-sorted + contents-vs-referee-set + the 2*log2(n+1) height bound after EVERY mutation; failures print the op log, broken rule, and a sideways color dump. 13 named cases (7 insert incl. climb-1..15 and both zig-zags, 6 delete incl. red leaf / one-red-child / double black / successor surgery / drain-to-empty / absent-key no-op), a 300-ordered-insert climb, 4 seeded stress mixes up to 3000 ops on 10^4 keys. Verified: reference CLRS implementation passes 18/18 in ~2.8s; five broken versions all caught (no insert fixup, no delete fixup, all-black plain BST -> height bound snaps, no-op delete, lying search). Siblings pointed at: #98, #110, #450, #701. ATTEMPT 1 (2026-08-03): the tree ITSELF already works - it is the exact implementation that passed all 14 leaderboard tests in #1244 the same day (CLRS insert/delete, both fixups, NIL sentinel). What fails here is the PORT to this notebook's contract, a half-finished rename: the Node class was updated to .key (per the harness contract) but the tree body was pasted from the leaderboard copy and still says .data everywhere - so 'Node(data=None)' in __init__ raises TypeError: unexpected keyword argument 'data' before any test runs, and every comparison (new_node.data < current.data, key == node.data) would AttributeError after that. SECOND LANDMINE waiting behind the rename, not yet hit: this notebook defines RED, BLACK = 'R', 'B' and Node defaults to color=RED, but the pasted tree compares against the old string literals ('z.parent.color == \"red\"', sets 'black') - 'R' != 'red', so NO fixup branch would ever fire and the tree would silently degrade to a plain BST until the validate() height bound snaps at the climb-1..15 case (this is exactly broken-version 3 the harness was calibrated against). Also minor: Node.__init__ takes a parent param but assigns self.parent = None regardless - harmless (every caller sets .parent explicitly) but worth deleting. The fix is one consistent rename: data -> key throughout the tree body, and every color literal -> the RED/BLACK constants."
   }
  ]
 }
