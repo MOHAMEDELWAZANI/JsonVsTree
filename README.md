@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="assets/ascii-art.svg" alt="Kung Fu Panda ASCII art" width="880">
+  <img src="assets/Kungfu-banner.png" alt="Kung Fu Panda ASCII art" width="880">
 </p>
 
 # LeetCode Practice
